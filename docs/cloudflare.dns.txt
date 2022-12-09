@@ -1,0 +1,37 @@
+file: /data/volumes/${SITE_NAME}/dms/config/opendkim/keys/${SITE_NAME}/mail.txt  - remove ", LF and CR
+Type 	        TXT
+Name	        mail._domainkey
+Content	        v=DKIM1; h=sha256; k=rsa;p=MIIBIjANBgkqhkiG9w0...(no '"', no LF, no CR)
+Proxy status	DNS only
+TTL	            Auto
+
+Type 	        TXT
+Name	        ${SITE_NAME}
+Content	        v=spf1 ip4:${IP} include:smtp.${SITE_NAME} -all
+Proxy status	DNS only
+TTL	            Auto
+
+Type 	        MX
+Name	        ${SITE_NAME}
+Content	        mail.${SITE_NAME}
+Proxy status	DNS only
+Priority        10
+TTL	            Auto
+
+Type 	        A
+Name	        mail
+Content	        ${IP}
+Proxy status	DNS only
+TTL	            Auto
+
+Type 	        A
+Name	        *
+Content	        ${IP}
+Proxy status	DNS only
+TTL	            Auto
+
+Type 	        A
+Name	        ${SITE_NAME}
+Content	        ${IP}
+Proxy status	DNS only
+TTL	            Auto

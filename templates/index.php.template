@@ -1,0 +1,4 @@
+<?php
+echo "<pre> It is ${SITE_PREFIX}${SITE_NAME}\n\n </pre>";
+phpinfo();
+?>
