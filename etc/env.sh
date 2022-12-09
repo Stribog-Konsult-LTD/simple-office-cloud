@@ -10,7 +10,7 @@ DEF_APS="aps_"
 DEF_NC="nc_"
 NETWORK_NAME="nginx-aps-db-net"
 DB_CONTAINER_NAME='mariadb-aps'
-DB_ROOT_PASSWORD='FL6wWnxVj76Anc9gg'
+DB_ROOT_PASSWORD='your-strong-password'
 
 NGINX_CONTAINER="nginx-rev-proxy"
 
